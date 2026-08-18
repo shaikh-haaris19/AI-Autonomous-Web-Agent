@@ -1,0 +1,22 @@
+CREATE TABLE `researchRuns` (
+	`id` varchar(40) NOT NULL,
+	`userId` int,
+	`originalRequest` text NOT NULL,
+	`status` enum('queued','running','completed','needs_confirmation','failed') NOT NULL,
+	`phase` enum('planning','searching','browsing','collecting','verifying','comparing','completing','needs_confirmation','failed') NOT NULL,
+	`currentAction` varchar(512) NOT NULL,
+	`interpretation` text,
+	`plan` text NOT NULL,
+	`sources` text NOT NULL,
+	`evidence` text NOT NULL,
+	`activities` text NOT NULL,
+	`visitedUrls` text NOT NULL,
+	`errors` text NOT NULL,
+	`retries` int NOT NULL DEFAULT 0,
+	`finalAnswer` text,
+	`finalFindings` text NOT NULL,
+	`confirmation` text,
+	`createdAt` timestamp NOT NULL DEFAULT (now()),
+	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
+	CONSTRAINT `researchRuns_id` PRIMARY KEY(`id`)
+);

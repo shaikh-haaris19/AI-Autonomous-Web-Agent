@@ -1,0 +1,25 @@
+# Project TODO
+
+- [x] Define shared agent domain types for phases, plans, evidence, execution records, source verification, and confirmation requirements.
+- [x] Add durable database schema and query helpers for research runs, plan steps, sources, evidence, and activity events.
+- [x] Implement the agent orchestration workflow: task interpretation, plan generation, safe tool selection, search, extraction, verification, comparison, and synthesis.
+- [x] Implement server-side local-Ollama integration with structured-response parsing and failure handling.
+- [x] Implement safe server-side web research tools with URL validation, prompt-injection screening, timeout limits, retry limits, and high-impact action blocks.
+- [x] Implement evidence collection and claim verification that detects corroboration, disagreement, and uncertainty.
+- [x] Implement run-state persistence, activity logs, and typed API procedures for execution and retrieval.
+- [x] Build the stark black brutalist research console with oversized condensed typography and a full-width red divider.
+- [x] Build task submission, live phase/status, plan, evidence/source, findings, error, and confirmation views without exposing private reasoning.
+- [x] Add a confirmation dialog that explicitly gates any high-impact action.
+- [x] Add tests for validation, guardrails, agent utilities, and essential API behavior.
+- [x] Configure local Ollama and browser environment variables through the project settings and document the equivalent local `.env` values.
+- [x] Run type checks, automated tests, and visual verification; resolve defects.
+- [x] Add a local-only Ollama health-check API that is called from the browser on the user’s Windows machine, never from the hosted environment.
+- [x] Add the requested local environment template and ensure local defaults use `http://127.0.0.1:11434` with a configurable model name.
+- [x] Remove cloud-environment Ollama connectivity tests while retaining local-safe configuration and guardrail tests.
+- [x] Require an explicit local-runtime flag before any Ollama health probe so hosted previews never contact `127.0.0.1`.
+- [x] Replace Unix-only package scripts with Windows-compatible commands.
+- [x] Allow the local research agent to run without a configured database while documenting optional database persistence setup.
+- [x] Update Windows startup instructions and verify the revised scripts.
+- [x] Make local server import specifiers resolvable by tsx on Windows.
+- [x] Verify the required safety runtime module is present in the current project archive and document how to replace an outdated local copy.
+- [x] Remove the standalone safety-module import from the Windows server startup path and verify a clean launch.
